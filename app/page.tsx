@@ -1,13 +1,45 @@
-// We'll replace this piece by piece as we build each section in the video.
-export default function HomePage() {
+import type { Metadata } from "next"
+
+import { Approach } from "@/components/approach"
+import { Capabilities } from "@/components/capabilities"
+import { Contact } from "@/components/contact"
+import Experience from "@/components/experience"
+import { Hero } from "@/components/hero"
+import { PracticeStrip } from "@/components/practice-strip"
+import { SelectedWork } from "@/components/selected-work"
+import { Stack } from "@/components/stack"
+
+const title = "Kuldeep Singh Rajput · Software Engineer"
+const description =
+  "Portfolio of Kuldeep Singh Rajput, a software engineer focused on backend engineering, distributed systems, and full-stack development."
+
+export const metadata: Metadata = {
+  title: { absolute: title },
+  description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "Kuldeep Singh Rajput",
+    locale: "en_US",
+    type: "website",
+  },
+}
+
+export default function Page(): React.ReactElement {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-3 p-8 text-center">
-      <h1 className="text-3xl font-medium tracking-tight">
-        Starter ready — let&apos;s build this together
-      </h1>
-      <p className="text-sm text-neutral-500">
-        Follow along with the video to build each section from here.
-      </p>
+    <main className="relative">
+      <Hero />
+      <PracticeStrip />
+      <Experience />
+      <SelectedWork />
+      <Capabilities />
+      <Approach />
+      <Stack />
+      <Contact />
     </main>
   )
 }

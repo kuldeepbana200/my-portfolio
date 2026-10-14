@@ -131,14 +131,38 @@ export const NAV_LINKS = [
   { label: "About", href: "#about" },
 ] as const
 
+export const HERO = {
+  eyebrow: "SOFTWARE ENGINEER · NIT ROURKELA",
+  headline: ["I build systems that", "make software work."],
+  description:
+    "I'm Kuldeep, an engineer interested in backend systems, distributed architecture, and AI-powered applications. I work primarily with Java, Spring Boot, and modern full-stack technologies, turning complex workflows into software that is practical and reliable.",
+} as const
+
+export const WORK_INTRO = {
+  period: "Selected projects",
+  title: "Systems built across backend engineering, distributed workflows, and full-stack development.",
+} as const
+
+export const CONTACT_COPY = {
+  title: "Interested in the systems behind a product?",
+  body: "I enjoy working on backend systems, distributed workflows, and full-stack products where careful engineering makes a practical difference.",
+  linkLabel: "Connect on LinkedIn",
+  link: "https://www.linkedin.com/in/kuldeep-singh-rajput2004/",
+  resumeLabel: "View my resume",
+  resume:
+    "https://drive.google.com/file/d/1tDALlrGO4HgrsrXFu4H3Ft8MBGGKBa_F/view?usp=sharing",
+  emailLabel: "Email me",
+  email: "mailto:banakuldeep200@gmail.com",
+} as const
+
 // --- Practice strip -------------------------------------------------------
 // components/practice-strip.tsx — the thin band of practice areas.
 export const PRACTICE_AREAS = [
-  { k: "01", v: "AI SaaS products" },
-  { k: "02", v: "Full-stack systems" },
-  { k: "03", v: "Workflow automation" },
-  { k: "04", v: "Product UI" },
-  { k: "05", v: "API-first architecture" },
+  { k: "01", v: "Backend Engineering" },
+  { k: "02", v: "Distributed Systems" },
+  { k: "03", v: "Full-Stack Development" },
+  { k: "04", v: "Data & Messaging" },
+  { k: "05", v: "Testing & Reliability" },
 ] as const
 
 // --- Selected work --------------------------------------------------------
@@ -150,7 +174,7 @@ export type Project = {
   year: string
   status: string
   tags: readonly string[]
-  href: string
+  href?: string
   image: string
   imageAlt: string
 }
@@ -158,68 +182,51 @@ export type Project = {
 export const PROJECTS: readonly Project[] = [
   {
     index: "01",
-    title: "AI Interior Design Platform",
+    title: "Smart Crop System",
     description:
-      "A workflow-driven SaaS product for interior designers and architects, combining image transformation, regional processing, and public API delivery.",
-    year: "2026",
-    status: "Live · v3.2",
-    tags: ["AI SaaS", "Image workflows", "API", "B2B"],
-    href: "#",
+      "A crop advisory and management system with separate farmer, officer, and admin workflows. The application combines authenticated access, relational data modeling, REST APIs, and Gemini-powered crop guidance.",
+    year: "—",
+    status: "Project",
+    tags: ["Java", "Spring Boot", "PostgreSQL", "React", "JWT", "Gemini API"],
     image: "/assets/projects/interior-design-platform.png",
     imageAlt:
-      "Interior design platform UI showing a before/after room render with a materials palette and a generate-design control bar.",
+      "Smart Crop System project visual.",
   },
   {
     index: "02",
-    title: "AI Headshot Generator",
+    title: "Cortex.AI",
     description:
-      "A polished consumer and team headshot experience with model training, image editing, credits, and premium generation flows.",
-    year: "2025",
-    status: "Live",
-    tags: ["AI Images", "Product UX", "Credits", "Teams"],
-    href: "#",
-    image: "/assets/projects/headshot-generator.png",
+      "An AI application organized as three services, with multi-agent orchestration through LangGraph and integrations with external model and search providers. It also includes session and usage management across the application stack.",
+    year: "—",
+    status: "Project",
+    tags: ["React", "Node.js", "Express", "LangGraph", "MongoDB", "Redis", "Docker"],
+    image: "/assets/projects/automation-agent-systems.png",
     imageAlt:
-      "AI headshot generator UI with a grid of generated professional portraits, style and lighting controls, and a credits counter.",
+      "Cortex.AI project visual.",
   },
   {
     index: "03",
-    title: "Automation & Agent Systems",
+    title: "Event-Driven Food Ordering Platform",
     description:
-      "Internal tools, workflow engines, and agent-backed systems designed to reduce manual operations and speed up product execution.",
-    year: "2024",
-    status: "Private",
-    tags: ["Automation", "Agents", "Workflows", "Infra"],
-    href: "#",
-    image: "/assets/projects/automation-agent-systems.png",
+      "A food-ordering system split across four services and connected with Kafka. The design uses Saga and Outbox patterns to coordinate service work, with JUnit, Mockito, and Testcontainers supporting automated verification.",
+    year: "—",
+    status: "Project",
+    tags: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Docker", "Testcontainers"],
+    image: "/assets/projects/headshot-generator.png",
     imageAlt:
-      "Dark automation dashboard showing an agent workflow node graph alongside a live event stream and run log.",
+      "Event-driven food ordering platform project visual.",
   },
   {
     index: "04",
-    title: "Document Intelligence",
+    title: "BraynAI",
     description:
-      "Extraction, classification, and review tooling that turns dense unstructured documents into structured, queryable records.",
-    year: "2024",
-    status: "Live",
-    tags: ["NLP", "Extraction", "Review UX", "Pipelines"],
-    href: "#",
-    image: "/assets/projects/document-intelligence.png",
-    imageAlt:
-      "Document intelligence UI extracting structured fields from an invoice, with a review queue and confidence indicators.",
-  },
-  {
-    index: "05",
-    title: "Data Labeling Platform",
-    description:
-      "A collaborative annotation surface with quality controls, reviewer queues, and exports tuned for fast model iteration.",
-    year: "2023",
-    status: "Live",
-    tags: ["Labeling", "Collaboration", "QA", "Tooling"],
-    href: "#",
-    image: "/assets/projects/data-labeling-platform.png",
-    imageAlt:
-      "Data labeling platform annotating a room scene with bounding boxes, a reviewer queue, and a quality score panel.",
+      "A full-stack AI SaaS platform with React and Tailwind on the client, an Express and Node.js API, and MongoDB persistence through Mongoose. It combines Gemini article, blog-title, and PDF resume review workflows with ClipDrop image generation, Cloudinary media handling, JWT and email-verification auth, Razorpay payments, markdown content, and a community image feed with likes.",
+    year: "—",
+    status: "Featured Project",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Gemini API", "Cloudinary", "Razorpay"],
+    href: "https://github.com/kuldeepbana200/BraynAi",
+    image: "/assets/projects/braynai-project.svg",
+    imageAlt: "BraynAI workspace illustration showing its AI tools and SaaS architecture.",
   },
 ]
 
@@ -229,41 +236,35 @@ export const PROJECTS: readonly Project[] = [
 export const CAPABILITIES = [
   {
     num: "— 01",
-    title: "Product engineering",
-    body: "End-to-end SaaS systems built for actual production load. Type-safe APIs, predictable data layers, and a frontend that survives real users without ceremony.",
+    title: "Backend Engineering",
+    body: "Backend services built around clear APIs, sound data models, and predictable behavior across integrations and failure cases.",
     items: [
-      "Next.js",
-      "Hono / tRPC",
-      "Postgres",
-      "Drizzle",
-      "Stripe",
-      "Edge / Workers",
+      "Java",
+      "Spring Boot",
+      "REST APIs",
+      "JPA / Hibernate",
     ],
   },
   {
     num: "— 02",
-    title: "AI workflow systems",
-    body: "Image, text, and agent pipelines that respect latency, cost, and failure modes. The hard parts — queues, retries, observability — built in from day one.",
+    title: "Distributed Systems",
+    body: "Service-oriented workflows and event-driven communication with attention to consistency, retries, and the boundaries between services.",
     items: [
-      "OpenAI",
-      "Replicate",
-      "Vercel AI SDK",
-      "Inngest",
-      "Queues",
-      "Vector DBs",
+      "Apache Kafka",
+      "Saga pattern",
+      "Outbox pattern",
+      "Docker",
     ],
   },
   {
     num: "— 03",
-    title: "Interface design",
-    body: "Calm, opinionated product UI with restraint. Typography, hierarchy, and motion treated as engineering disciplines — not decoration applied at the end.",
+    title: "Data & Full-Stack Development",
+    body: "Relational data modeling and responsive product interfaces that make complex workflows usable from end to end.",
     items: [
-      "Design systems",
-      "Tailwind",
-      "Radix / shadcn",
-      "Framer Motion",
-      "Figma",
-      "Prototyping",
+      "PostgreSQL",
+      "React",
+      "Node.js",
+      "SQL",
     ],
   },
 ] as const
@@ -273,23 +274,23 @@ export const CAPABILITIES = [
 export const APPROACH_STEPS = [
   {
     k: "— Step 01",
-    t: "Understand the business goal",
-    d: "Before any UI or schema. What does this product change for the people using it, and how do we know it worked?",
+    t: "Understand the problem",
+    d: "Clarify the users, workflow, constraints, and failure cases before choosing a technical solution.",
   },
   {
     k: "— Step 02",
-    t: "Design the smallest useful product",
-    d: "The shortest path between a real user and a real outcome. Everything else is deferred until the core is honest.",
+    t: "Design the system",
+    d: "Shape the data model, service boundaries, API contracts, and messaging flow so the system is understandable before implementation.",
   },
   {
     k: "— Step 03",
-    t: "Build with production architecture",
-    d: "Type-safe from edge to database. Observability, retries, and migrations as first-class — not bolted on under pressure.",
+    t: "Implement and test",
+    d: "Build in small increments, then use unit, integration, and end-to-end tests to validate behavior at the boundaries that matter.",
   },
   {
     k: "— Step 04",
-    t: "Refine until it feels effortless",
-    d: "The last 20% is where products stop feeling like demos. Latency, copy, motion, edge cases — sanded down until they disappear.",
+    t: "Improve reliability",
+    d: "Use logs, tests, and observed failure modes to remove fragile paths and make the system easier to operate and change.",
   },
 ] as const
 
@@ -297,41 +298,40 @@ export const APPROACH_STEPS = [
 // components/stack.tsx — the editor-mockup panes. Each item is [name, tag].
 export const STACK_PANES = [
   {
-    title: "Application",
+    title: "Backend Engineering",
     items: [
-      ["Next.js", "framework"],
-      ["TypeScript", "language"],
-      ["React 19", "ui"],
-      ["Tailwind CSS", "styling"],
-      ["Radix / shadcn", "primitives"],
+      ["Java", "language"],
+      ["Spring Boot", "framework"],
+      ["REST APIs", "service boundary"],
+      ["JPA / Hibernate", "persistence"],
     ],
   },
   {
-    title: "Server & data",
+    title: "Data & Messaging",
     items: [
-      ["Node.js / Hono", "runtime"],
-      ["Postgres", "database"],
-      ["Drizzle ORM", "data"],
-      ["Cloudflare", "edge"],
-      ["Vercel", "deploy"],
+      ["PostgreSQL", "database"],
+      ["SQL", "query language"],
+      ["Apache Kafka", "messaging"],
+      ["MongoDB", "document store"],
     ],
   },
   {
-    title: "AI & workflows",
+    title: "Full-Stack Development",
     items: [
-      ["Vercel AI SDK", "orchestration"],
-      ["OpenAI / Anthropic", "models"],
-      ["Replicate", "image"],
-      ["Inngest", "workflows"],
+      ["React", "library"],
+      ["Node.js", "runtime"],
+      ["Express", "framework"],
+      ["JavaScript", "language"],
     ],
   },
   {
-    title: "Infra",
+    title: "Delivery & Testing",
     items: [
-      ["Docker", "runtime"],
-      ["Resend", "email"],
-      ["Stripe", "payments"],
-      ["PostHog / Sentry", "observability"],
+      ["Docker", "containerization"],
+      ["JUnit", "unit testing"],
+      ["Mockito", "test doubles"],
+      ["Testcontainers", "integration testing"],
+      ["Git", "version-control"],
     ],
   },
 ] as const
@@ -339,12 +339,19 @@ export const STACK_PANES = [
 // --- About ----------------------------------------------------------------
 // components/contact.tsx (About band) — the meta definition list. [key, value].
 export const ABOUT_META = [
-  ["Based", "India · GMT +5:30"],
-  ["Practice", "AI-first SaaS products"],
-  ["Years shipping", "6+"],
-  ["Availability", "Selected product builds"],
-  ["Engagements", "Fractional · Build · Advisory"],
+  ["Education", "B.Tech ECE · NIT Rourkela"],
+  ["CGPA", "9.37"],
+  ["Practice", "Backend & Full-Stack Engineering"],
+  ["Experience", "BNY Mellon"],
+  ["Projects", "Cortex.AI · Smart Crop · Event Platform"],
+  ["Leadership", "Training & Placement · Film & Music · A&C Club"],
 ] as const
+
+// --- About Text -----------------------------------------------------------
+// components/about.tsx — main about paragraph.
+export const ABOUT = {
+  text: "I'm Kuldeep Singh Rajput, a B.Tech student in Electronics and Communication Engineering at NIT Rourkela, where I maintain a 9.37 CGPA. My experience at BNY Mellon has taken me through test automation, deployment workflows, and Kafka tuning, while projects such as Cortex.AI, Smart Crop System, and an event-driven food platform have deepened my interest in backend systems, distributed architecture, and AI-powered applications.",
+} as const
 
 // --- Site footer ----------------------------------------------------------
 // components/site-footer.tsx — link columns. Each link is [label, href].
@@ -362,40 +369,80 @@ export const FOOTER_COLUMNS = [
   {
     title: "Contact",
     links: [
-      ["codebucks.agency", "mailto:codebucks27@gmail.com"],
-      ["Start a project", "#contact"],
-    ],
-  },
-  {
-    title: "Social",
-    links: [
-      ["GitHub ↗", "https://github.com/codebucks27"],
-      ["LinkedIn ↗", "https://www.linkedin.com/in/codebucks/"],
-      ["X / Twitter ↗", "https://x.com/code_bucks"],
+      ["LinkedIn ↗", "https://www.linkedin.com/in/kuldeep-singh-rajput2004/"],
+      ["Email ↗", "mailto:banakuldeep200@gmail.com"],
     ],
   },
 ] as const
 
-// --- Token-usage widget ---------------------------------------------------
-// components/widgets/token-usage.tsx — sample usage rows.
-export type Vendor = "Anthropic" | "OpenAI" | "Google" | "Mistral"
-
-export type UsageRow = {
-  model: string
-  vendor: Vendor
-  tokens: number
-  costUsd: number
+// --- Experience -----------------------------------------------------------
+// components/experience.tsx — professional history entries.
+export type Experience = {
+  role: string
+  company: string
+  period: string
+  description: string
 }
 
-export const TOKEN_USAGE: UsageRow[] = [
-  { model: "Opus 4.7", vendor: "Anthropic", tokens: 8_230_000, costUsd: 211 },
-  { model: "Sonnet 4.6", vendor: "Anthropic", tokens: 2_400_000, costUsd: 42 },
-  { model: "Haiku 4.5", vendor: "Anthropic", tokens: 1_140_000, costUsd: 19 },
-  { model: "GPT-5", vendor: "OpenAI", tokens: 730_000, costUsd: 12 },
+export const EXPERIENCE: readonly Experience[] = [
+  {
+    role: "Software Development Engineer Intern",
+    company: "BNY Mellon",
+    period: "May–July 2026",
+    description: "Built Zephyr Scale and Jira REST API test-automation workflows, then packaged test execution and result publishing into a reusable CI/CD pipeline. Automated FastPath RFC deployment workflows, reducing approvals from seven days to under one hour. Also tuned Apache Kafka topics and concurrent consumer configurations to improve messaging throughput.",
+  },
 ]
 
+export const LEADERSHIP = [
+  {
+    role: "Training Coordinator",
+    company: "Training & Placement Cell, NIT Rourkela",
+    period: "NIT Rourkela",
+    description: "Coordinated student-facing training and placement activities alongside academic and recruiting stakeholders.",
+  },
+  {
+    role: "Dean's Nominee",
+    company: "Film & Music Society, NIT Rourkela",
+    period: "August 2025–August 2026",
+    description: "Represented student interests in the society's coordination and decision-making work.",
+  },
+  {
+    role: "President",
+    company: "Analytics & Consulting Club, NIT Rourkela",
+    period: "May 2025–May 2026",
+    description: "Led 50+ members and launched NIT Rourkela's first consulting casebook for 100+ aspirants.",
+  },
+] as const
 
-/* 
+// --- Open Source Contributions --------------------------------------------
+// Legacy widget data is intentionally not included.
+export type Contribution = {
+  project: string
+  description: string
+  url: string
+}
+
+export const OPEN_SOURCE_CONTRIBUTIONS: readonly Contribution[] = []
+
+// --- Beyond Code ----------------------------------------------------------
+// components/beyond-code.tsx — beyond code section.
+export const BEYOND_CODE = [
+  {
+    title: "Leadership",
+    description: "I enjoy making technical ideas easier to share, whether that means coordinating a student team or turning a broad topic into a useful casebook.",
+  },
+  {
+    title: "Systems Thinking",
+    description: "I like tracing a workflow across APIs, data, messaging, and user experience instead of treating each layer as an isolated task.",
+  },
+  {
+    title: "Clear Communication",
+    description: "Good documentation and clear interfaces reduce avoidable complexity for the people who build, test, and maintain a system.",
+  },
+] as const
+
+
+/*
 Navigation Bar Variants:
 
 type Variant = "overlay" | "solid"
@@ -412,9 +459,9 @@ const VARIANT_STYLES: Record<
     trigger: string
     // Mobile dropdown panel surface.
     panel: string
-    //  Links inside the mobile panel. 
+    //  Links inside the mobile panel.
     panelLink: string
-    //  Hairline divider inside the mobile panel. 
+    //  Hairline divider inside the mobile panel.
     panelDivider: string
   }
 > = {

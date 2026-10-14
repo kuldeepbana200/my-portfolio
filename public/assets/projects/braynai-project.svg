@@ -1,0 +1,45 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="90" y1="80" x2="1080" y2="1120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171A2B"/>
+      <stop offset="1" stop-color="#293C6E"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="220" y1="180" x2="970" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".04"/>
+    </linearGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="70"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <circle cx="150" cy="160" r="190" fill="#8A9DFF" fill-opacity=".28" filter="url(#blur)"/>
+  <circle cx="1030" cy="1040" r="230" fill="#E8A36B" fill-opacity=".2" filter="url(#blur)"/>
+  <rect x="105" y="105" width="990" height="990" rx="34" fill="url(#panel)" stroke="#DDE5FF" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M105 230H1095" stroke="#DDE5FF" stroke-opacity=".2"/>
+  <circle cx="150" cy="168" r="8" fill="#FF756D"/>
+  <circle cx="178" cy="168" r="8" fill="#F6C85F"/>
+  <circle cx="206" cy="168" r="8" fill="#73D59A"/>
+  <text x="250" y="178" fill="#F8FAFF" font-family="Arial, sans-serif" font-size="25" font-weight="600">braynAI / workspace</text>
+  <rect x="170" y="300" width="270" height="170" rx="18" fill="#10182F" fill-opacity=".8" stroke="#9CB0FF" stroke-opacity=".55"/>
+  <text x="200" y="350" fill="#AFC0FF" font-family="Arial, sans-serif" font-size="17" letter-spacing="2">AI TOOLS</text>
+  <text x="200" y="395" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22">Article generator</text>
+  <text x="200" y="432" fill="#C6CEE6" font-family="Arial, sans-serif" font-size="17">Blog titles · Resume review</text>
+  <rect x="760" y="300" width="270" height="170" rx="18" fill="#10182F" fill-opacity=".8" stroke="#9CB0FF" stroke-opacity=".55"/>
+  <text x="790" y="350" fill="#AFC0FF" font-family="Arial, sans-serif" font-size="17" letter-spacing="2">MEDIA</text>
+  <text x="790" y="395" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22">Image generation</text>
+  <text x="790" y="432" fill="#C6CEE6" font-family="Arial, sans-serif" font-size="17">Cloudinary · ClipDrop</text>
+  <path d="M440 385H760" stroke="#AFC0FF" stroke-opacity=".7" stroke-width="3" stroke-dasharray="9 12"/>
+  <circle cx="600" cy="385" r="35" fill="#6D80E8" fill-opacity=".35" stroke="#C6D0FF"/>
+  <path d="M600 366V404M581 385H619" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <rect x="300" y="650" width="600" height="245" rx="20" fill="#0D1428" fill-opacity=".9" stroke="#DDE5FF" stroke-opacity=".25"/>
+  <text x="340" y="705" fill="#AFC0FF" font-family="Arial, sans-serif" font-size="17" letter-spacing="2">FULL-STACK SAAS</text>
+  <text x="340" y="755" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="28" font-weight="600">React  ·  Express  ·  MongoDB</text>
+  <path d="M385 815H815" stroke="#7F92F4" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="385" cy="815" r="12" fill="#73D59A"/>
+  <circle cx="600" cy="815" r="12" fill="#F6C85F"/>
+  <circle cx="815" cy="815" r="12" fill="#E48BFF"/>
+  <text x="340" y="855" fill="#C6CEE6" font-family="Arial, sans-serif" font-size="17">JWT auth</text>
+  <text x="548" y="855" fill="#C6CEE6" font-family="Arial, sans-serif" font-size="17">Payments</text>
+  <text x="760" y="855" fill="#C6CEE6" font-family="Arial, sans-serif" font-size="17">Community</text>
+</svg>
